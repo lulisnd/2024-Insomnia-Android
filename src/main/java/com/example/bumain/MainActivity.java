@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,28 +16,28 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void startAcivitiy(Intent intent){
+    public void startAcivitiy(Intent intent) {
 
     }
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ConstraintLayout constraintLayout1 = findViewById(R.id.constraintLayout1);
-        ConstraintLayout constraintLayout2 = findViewById(R.id.constraintLayout2);
+        ConstraintLayout constraintLayout = findViewById(R.id.ConstraintLayout4);
+        ConstraintLayout constraintLayout1 = findViewById(R.id.ConstraintLayout5);
 
-        ImageButton imageButton1 = findViewById(R.id.imageButton1);
-        ImageButton imageButton2 = findViewById(R.id.imageButton2);
-        ImageButton imageButton3 = findViewById(R.id.imageButton3);
-        ImageButton imageButton4 = findViewById(R.id.imageButton4);
+        ImageButton imageButton10 = findViewById(R.id.imageButton10);
+        ImageButton imageButton2 = findViewById(R.id.imageButton9);
 
-        imageButton1.setOnClickListener(new View.OnClickListener() {
+        imageButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // 创建 Intent
-                Intent intent = new Intent(MainActivity.this, activity1.class);
+                Intent intent = new Intent(MainActivity.this, activity2.class);
 
                 // 可选：传递数据到目标 Activity
                 intent.putExtra("key", "value");
@@ -45,6 +46,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
